@@ -34,7 +34,9 @@ def test_one(method, a, n, m, expected):
     tested = method(a, n, m)
     result = 'Passed' if tested == expected else 'Failed'
     n_str = str(n) if n < pow(2, 64) else '...'
-    print('{}: {}({},{},{})={}, expected={}'.format(result, method.__name__, a, n_str, m, tested, expected))
+    print('{}: {}({},{},{})={}, expected={}'.format(result, method.__name__, a,
+                                                    n_str, m, tested,
+                                                    expected))
 
 
 if __name__ == '__main__':
